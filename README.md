@@ -1,4 +1,4 @@
-**Software:** Web Task Automator 
+**PROGRAM:** Web Task Automator 
 
 **ABOUT:** This is a software built to facilitate a task on a WordPress admin web page, It helps the site admin manager to change users status to some other certain status. 
 
