@@ -5,6 +5,20 @@ from app import Scraper
 from ui_app import *
 import sys, os
 
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+ICON = resource_path("assets/code.ico")
+print(ICON)
+
 class Dialog(QDialog):
 	def __init__(self, parent=None):
 		super().__init__(parent)
@@ -43,7 +57,7 @@ class MainWindow(QMainWindow):
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
 		self.setWindowTitle("Web Automator")
-		self.setWindowIcon(QIcon("./assets/code.ico"))
+		self.setWindowIcon(QIcon(ICON))
 		self.ui.start_btn.clicked.connect(self.initialize_scraper)
 		self.ui.user_input.returnPressed.connect(self.user_entry)
 		self.driver_path_fname = os.path.join(os.environ["APPDATA"], "driver_path.txt")
