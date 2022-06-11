@@ -16,9 +16,3 @@ Step 4: Run "python main.py" from your terminal to execute the script
 
 
 *Note:* You have to download a chromedriver for your Chrome browser version
-
-# fiver23
-# sP9ISL(7C%Q4*O#g3XRaw3Tq
-# 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
-# 9efaf02c5cad061f03d5
-sP9ISL(7C%Q4*O#g3XRaw3Tq
